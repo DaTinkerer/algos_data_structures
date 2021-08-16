@@ -7,7 +7,7 @@ class HashTable:
     def get_hash(self, key):
         h = 0
         for char in key:
-            #adds the sum of all the ascii codes in each character to h
+            #sums all the ascii codes in each character and sets it to h
             h += ord(char)
         # this gives the key a unique indentifier 
         return h % self.MAX
@@ -15,7 +15,7 @@ class HashTable:
     def __setitem__(self, key, val):
         h = self.get_hash(key)
         self.arr[h] = val
-    # returns the index of the give key
+    # returns the index of the given key
     def __getitem__(self, key):
         h = self.get_hash(key)
         return self.arr[h]
