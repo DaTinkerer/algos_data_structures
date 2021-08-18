@@ -11,7 +11,7 @@ class HashTable:
             h += ord(char)
         # this gives the key a unique indentifier 
         return h % self.MAX
-    # lets me set any value and give it an index in the array
+    # lets me set a value and give it an index in the array
     def __setitem__(self, key, val):
         h = self.get_hash(key)
         self.arr[h] = val
